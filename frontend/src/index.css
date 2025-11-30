@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b071c;
+  --surface: #0f1724; /* slightly lighter */
+  --muted: #9aa4b2;
+  --accent: #2aa7f7;
+  --primary: #7b56ea;
+}
+
+/* Apply dark theme by default */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @layer utilities {
+    .bg-\[color\:var\(--bg\)\] {
+      background-color: var(--bg);
+    }
+  }
+  
+  background-color: var(--bg); 
+  color: white; 
+
+  background: linear-gradient(180deg, #07040f 0%, #0b071c 40%, #060310 100%);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.btn {
+  border-radius: 0.375rem; 
+  padding-left: 1rem;     
+  padding-right: 1rem;   
+  padding-top: 0.5rem;    
+  padding-bottom: 0.5rem; 
+  font-weight: 500;       
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+:root {
+  --bg-main: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  --surface: #0b1220;
+  --primary-500: #8b5cf6;
+  --primary-600: #7c3aed;
+  --accent-500: #22d3ee;
+  --accent-400: #67e8f9;
+}
+
+body {
+  background: var(--bg-main);
+  color: white;
+  min-height: 100vh;
+}
